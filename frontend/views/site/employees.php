@@ -60,6 +60,17 @@
                         </div>
                     </a>
                 </li>
+                <?php foreach ($employees as $employee):?>
+
+                    <li>
+                        <a href="#tab<?=$employee->id;?>">
+                            <div class="list clearfix">
+                                <img src="/images/company-img07.jpg" width="70" height="70" alt="icon0<?=$employee->id;?>" class="icon-tabs pull-left">
+                                <span class="two-lines"><?=$employee->name;?></span>
+                            </div>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
         <div class="tab-content" id="tab1">
