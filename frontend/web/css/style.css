@@ -1,0 +1,1968 @@
+@import "../css/simple-line-icons.css" screen;
+.menu-item {
+    font-size: 18px;
+    color: #f7f3af;
+    padding-right: 17px;
+}
+.about-item {
+    position: absolute;
+    color: #905d2b;
+    font-size: 24px;
+}
+body{
+    margin:0;
+    color:#888;
+    font: 14px Ubuntu, Arial, sans-serif;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:none;
+    min-width: 1024px;
+}
+img{border:0;vertical-align:top;-ms-interpolation-mode:bicubic;}
+a{
+    font-size: inherit;
+    color:#6d5f44;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:hover{text-decoration:underline;}
+h1{font-size:2em;margin:0.67em 0;}
+h2 {
+    margin:0.83em 0;
+    color: #905d2b;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: 'Bookman Old Style', Ubuntu, sans-serif;
+}
+p,dl,menu,ol,ul{margin:1em 0;}
+dd{margin:0 0 0 40px;}
+menu,ol,ul{padding:0 0 0 40px;}
+header {
+    position: fixed;
+    display: none;
+    width: 100%;
+    background: #2b1712 url('../images/header-bg.jpg') repeat;
+    height: 72px;
+    min-height: 72px;
+    z-index: 9999;
+    min-width: 1024px;
+}
+header .holder {
+    padding: 23px 40px;
+}
+header .logo {
+    display: block;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+header .tagline {
+    top: 20px;
+    position: absolute;
+    color: #867360;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.hamburger {
+    background:none;
+    position:fixed;
+    top:0;
+    right:0;
+    line-height:24px;
+    padding:24px 40px;
+    color:#f7f3af;
+    border:0;
+    font-size:1.4em;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:99999;
+}
+.cross {
+    background:none;
+    position:fixed;
+    top:0px;
+    right:0;
+    padding:24px 40px 8px 40px;
+    color:#f7f3af;
+    border:0;
+    font-size:3em;
+    line-height:40px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:99999;
+}
+.main-menu {
+    position: fixed;
+    min-width: 1024px;
+    width:100%;
+    z-index:999;
+    margin-top: 72px;
+}
+.main-menu .menu {
+    display: none;
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgba(255,255,255,0.07);
+    overflow: hidden;
+}
+.main-menu li {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0 !important;
+}
+.main-menu li:hover {
+    background-color: rgba(144, 93, 43, 0.10);
+    text-decoration: none;
+}
+.main-menu li.active {
+    background: url('../images/li-bg1024.jpg');
+    background-size: cover 100% 100%;
+}
+.main-menu a:hover {
+    text-decoration: none;
+}
+.main-menu .btm {
+    display: none;
+    background: #2b1712 url('../images/header-bg.jpg') repeat;
+}
+.btm .lang {
+    padding: 30px 0 15px 0;
+    width: 121px;
+    margin: 0 auto;
+}
+.btm .copyright {
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.clearfix {
+    display: block;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.cell {
+    display: table-cell;
+}
+.flexible {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.flexible-columns {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.container {
+    margin: 0 auto;
+    width: 990px;
+    overflow: hidden;
+}
+.border {
+    border-bottom: solid 1px #e5e5e5;
+}
+.naming {
+    color: #000;
+    font-weight: 300;
+    font: 24px/1.2 'Bookman Old Style', Ubuntu, sans-serif;
+}
+.aside .logo {
+    display: block;
+}
+.aside {
+    position: fixed;
+    background: #2b1712 url('../images/main-menu-bg.jpg') repeat-y;
+    background-size: cover 100% 100%;
+    height: 100%;
+    min-height: 620px;
+    width: 276px;
+    z-index: 9999;
+}
+.aside-holder {
+    padding: 60px 30px 30px;
+}
+.aside-holder .tagline {
+    display: block;
+    padding: 10px 0;
+    color: #867360;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.menu {
+    margin: 0;
+    line-height: 1.724;
+    padding: 35px 0;
+    color: #fff;
+}
+.menu li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 16px;
+}
+.menu li.active:after {
+    position: absolute;
+    content: '';
+    background: url('../images/li-bg1366.jpg');
+    width: 276px;
+    height: 42px;
+    top: -3px;
+    left: -30px;
+    z-index: -1;
+}
+.menu li.active:before {
+    position: absolute;
+    content: '';
+    background: url('../images/li-arrowbg1366.png');
+    width: 21px;
+    height: 42px;
+    top: -3px;
+    left: 245px;
+    z-index: -1;
+}
+.menu a {
+    color: inherit;
+    font-size: inherit;
+}
+.aside .footer {
+    position: absolute;
+    bottom: 0;
+}
+.footer .footer-holder {
+    padding-bottom: 30px;
+}
+.lang {
+    padding: 35px 0;
+}
+.lang img {
+    padding-right: 16px;
+    width: 22px;
+    height: 22px;
+}
+.footer .copyright,
+.btm .copyright {
+    color: #867360;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.main {
+    margin-left: 276px;
+    min-width: 990px;
+}
+.intro .container {
+    padding-top: 44px;
+    padding-bottom: 42px;
+}
+.intro-top {
+    padding-bottom: 39px;
+    font-size: 16px;
+}
+.intro-top h2 {
+    position: absolute;
+    content: '';
+    min-width: 700px;
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+}
+.intro-top .tagline {
+    display: block;
+    padding-top: 80px;
+    color: #181818;
+    font-size: 36px;
+    font-weight: 300;
+}
+.intro-top .umbrella {
+    padding: 24px 16px 10px;
+}
+.intro p {
+    margin: 0;
+    line-height: 1.75;
+    padding-top: 28px;
+}
+.intro-btm {
+    display: table;
+    table-layout: fixed;
+    margin: 0 -100px;
+    border-spacing: 100px 0;
+    width: 1190px;
+}
+.intro-btm p {
+    padding-top: 6px;
+}
+.intro-btm .name {
+    color: #905d2b;
+    font: 24px 'Bookman Old Style', Ubuntu, sans-serif;
+    text-align: left;
+}
+.services-top {
+    padding-bottom: 91px;
+}
+.services-top span {
+    display: block;
+}
+.services-top .subnaming {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.2;
+}
+.services .flexible-columns {
+    width: 315px;
+    padding-bottom: 70px;
+}
+.services .correct {
+    padding-left: 22px;
+}
+.services .flexible img {
+    padding-right: 10px;
+    vertical-align: middle;
+}
+.services .flexible a {
+    position: absolute;
+    content: '';
+    width: 230px;
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    color: #905d2b;
+}
+.services .flexible a.one-line {
+    margin-top: 16px;
+}
+.services .flexible a.three-line {
+    margin-top: 0px;
+}
+.services .container {
+    padding-bottom: 29px;
+    padding-top: 84px;
+}
+.experience {
+    color: #848372;
+    background: url('../images/exp-bg01.jpg') no-repeat, #edece1 url('../images/exp-bg02.jpg') repeat;
+    background-size: 100%;
+}
+.experience .container {
+    padding-top: 85px;
+    padding-bottom: 90px;
+}
+.experience p {
+    line-height: 1.714;
+}
+.exp-top p {
+    font-size: 16px;
+    line-height: 1.75;
+}
+.exp-top {
+    padding-bottom: 50px;
+}
+.exp-btm {
+    padding-bottom: 60px;
+    display: table;
+    table-layout: fixed;
+    margin: 0 -70px;
+    border-spacing: 70px 0;
+    width: 1130px;
+}
+.exp-btm .name {
+    color: #000;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.conclusion {
+    color: #000;
+    font: 18px/1.55 'Bookman Old Style', Ubuntu, sans-serif;
+}
+.about .container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.about-top .naming {
+    display: block;
+    padding-bottom: 50px;
+}
+.about-top img {
+    display: block;
+    padding-left: 30px;
+}
+.about-top .holder {
+    width: 650px;
+    overflow: hidden;
+}
+.about-top .txt-holder {
+    padding: 0 45px 60px 0;
+}
+.txt-holder p {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+.about-top .table-block {
+    padding-bottom: 80px;
+    display: table;
+    table-layout: fixed;
+    margin: 0 -30px;
+    border-spacing: 30px 0;
+    width: 710px;
+}
+.about .cell-block {
+    padding: 0 50px;
+    line-height: 1.57;
+}
+.about .cell-block .name {
+    color: #000;
+    font-weight: 500;
+}
+.about-btm .table-block {
+    display: table;
+    table-layout: fixed;
+    margin: 0 -30px;
+    border-spacing: 30px 0;
+    width: 1050px;
+}
+.footer .container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.footer .table-block {
+    display: table;
+    table-layout: fixed;
+    margin: 0 -35px;
+    border-spacing: 35px 0;
+    width: 1060px;
+}
+.footer .cell-block {
+    height: 60px;
+    width: 60px;
+}
+.footer .name a {
+    color: #b4b4b4;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.footer .name a:hover, .footer .cell:hover a {
+    color: #000;
+}
+.footer .name {
+    color: #b4b4b4;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.footer .cell img {
+    position: absolute;
+}
+.footer .cell-block {
+    overflow: hidden;
+    position: relative;
+}
+.cell-block img.png,
+.footer .cell:hover img.jpg {
+    margin-top: 0px;
+}
+.footer .cell:hover img.png {
+    margin-top: 400px;
+}
+.cell-block img.jpg {
+    margin-top: -400px;
+}
+/*COMPANY STYLES*/
+.company .container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    color: #696969;
+}
+.intro.container {
+    padding-bottom: 80px;
+}
+.company .industry {
+    width: 430px;
+    padding-right: 50px;
+}
+.company .practice-holder {
+    width: 500px;
+    padding-right: 10px;
+}
+.industry img {
+    padding-bottom: 86px;
+}
+.industry .naming {
+    display: block;
+    font-weight: 400;
+    padding-bottom: 21px;
+}
+.industry ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 15px;
+}
+.industry .list {
+    position: relative;
+    font-size: 16px;
+    line-height: 2.25;
+    font-weight: 300;
+}
+.industry .list:before {
+    position: absolute;
+    content: "";
+    background: #696969;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    top: 50%;
+    left: -10px;
+}
+.practice-holder h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+.practice-holder .tagline {
+    display: block;
+    padding-bottom: 65px;
+    color: #181818;
+    font-size: 20px;
+    font-weight: 300;
+}
+.practice {
+    background: #eae9de url('../images/practice-img01.jpg') repeat;
+    width: 392px;
+    height: 100%;
+}
+.practice .naming {
+    display: block;
+    padding: 34px 50px 20px 50px;
+}
+.practice-list {
+    color: #888;
+    list-style: none;
+    margin: 0;
+    padding: 0 50px 24px 50px;
+}
+.practice-list li {
+    line-height: 1.1;
+    padding-bottom: 13px;
+}
+.about .container {
+    padding-top: 82px;
+}
+.company .about .txt-holder {
+    padding-bottom: 80px;
+}
+.company .about-btm {
+    padding-bottom: 23px;
+}
+.company .about-top {
+    padding-bottom: 0;
+}
+.company .about-top .table-block {
+    padding-bottom: 32px;
+}
+.curators-top .naming {
+    display: block;
+    padding-top: 31px;
+    padding-bottom: 10px;
+}
+.curators .tabset {
+    margin: 0;
+    padding: 28px 0 50px 0;
+    list-style: none;
+}
+.curators .tabset li {
+    display: inline-block;
+    padding-right: 35px;
+}
+.curators .tabset .active {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    outline: none;
+    border: 4px solid #905d2b;
+}
+.curators .tab-content .pull-left {
+    width: 260px;
+    padding-right: 10px;
+}
+.curators .tab-content .pull-right {
+    width: 720px;
+}
+.curators .tab-content .naming {
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 1.33;
+}
+.curators .tab-content a {
+    padding-top: 10px;
+    display: block;
+    color: #905d2b;
+    text-decoration: underline;
+}
+.curators .tab-content a:hover {
+    text-decoration: none;
+}
+.tab-content p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.857;
+}
+.company .exp-holder {
+    background: url('../images/practice-img01.jpg') repeat;
+    padding: 30px 0;
+}
+.company .exp-holder p {
+    line-height: 1.714;
+}
+/*END COMPANY STYLES*/
+/*DIRECTIONS STYLES*/
+.directions .heading {
+    display: block;
+    position: relative;
+    padding: 60px 40px;
+    font: 16px/1.75 'Bookman Old Style', Ubuntu, sans-serif;
+}
+.directions .heading:before {
+    position: absolute;
+    content: '';
+    background: #adadad;
+    width: 16px;
+    height: 1px;
+    top: 74px;
+    left: 9px;
+    z-index: 2;
+}
+.services-btm .naming {
+    display: inline-block;
+    font-size: 20px;
+    padding: 50px 0;
+}
+.services-btm .flexible-columns {
+    width: 270px;
+}
+.services-btm .others {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+.services-btm .others p {
+    margin: 0;
+    padding: 0 0 0 35px;
+}
+.services-btm span.mega {
+    position: absolute;
+    content: '';
+    color: #b8b7a3;
+    font-size: 18px;
+    padding-right: 15px;
+}
+/*END DIRECTIONS STYLES*/
+/*ONE-DIRECTION STYLES*/
+.one-direction,
+.employees {
+    color: #696969;
+}
+.main-menu .menu li.active:before,
+.main-menu .menu li.active:after,
+.one-direction .menu li.active:before,
+.employees .menu li.active:before {
+    display: none;
+}
+.bg-holder {
+    position: fixed;
+    background: #ecece0 url('../images/practice-img01.jpg') repeat;
+    width: 300px;
+    height: 100%;
+    min-height: 100%;
+    text-indent: -9999px;
+}
+.tabset-holder {
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    min-height: 100%;
+}
+.tabset-holder .tabset {
+    margin: 0;
+    padding: 46px 0;
+    list-style: none;
+    position: relative;
+}
+.tabset-holder .tabset a {
+    display: block;
+    position: relative;
+    width: 300px;
+    line-height: 1.57;
+    color: #905d2b;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    outline: none;
+}
+.tabset-holder .tabset a.active {
+    background: #f6f6f0 url('../images/one-direction-img01.jpg') repeat;
+    text-decoration: none;
+}
+.tabset-holder .tabset a.active:after {
+    position: absolute;
+    content: '';
+    background-image: url('../images/one-direction-img01.png');
+    width: 56px;
+    height: 111px;
+    top: 0;
+    left: 300px;
+}
+.tabset-holder .list {
+    padding: 0 25px;
+}
+.tabset-holder .list p {
+    margin: 0;
+    padding: 0;
+}
+.tabset-holder a.active .icon-tabs {
+    border-color: #c5c5a3;
+}
+.tabset-holder .icon-tabs {
+    margin-right: 18px;
+    padding: 3px;
+    border: solid 3px #d6d6c4;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.tabset-holder .list span {
+    display: block;
+}
+.tab-holder .dirlist li {
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+.list .one-line {
+    padding-top: 27px;
+}
+.list .two-lines {
+    padding-top: 16px;
+}
+.list .three-lines {
+    padding-top: 5px;
+}
+.tab-content .tab-holder {
+    margin-left: 300px;
+    padding: 60px 60px 60px 90px;
+}
+.tab-holder.border .naming {
+    display: block;
+    padding-bottom: 30px;
+}
+.tab-content .tab-holder p {
+    padding-bottom: 40px;
+}
+.tab-content .listname {
+    line-height: 1.857;
+}
+.one-direction .title {
+    display: block;
+    color: #000;
+    padding-bottom: 30px;
+    line-height: 1.57;
+}
+.one-direction .curator-name {
+    display: block;
+    padding-top: 26px;
+    padding-bottom: 80px;
+    font-size: 18px;
+    line-height: 1.34;
+}
+.one-direction .table-layout {
+    width: 650px;
+    overflow: hidden;
+}
+.one-direction .table-block {
+    padding-bottom: 40px;
+    display: table;
+    table-layout: fixed;
+    margin: 0 -50px;
+    border-spacing: 50px 0;
+    width: 750px;
+}
+.one-direction .cell {
+    width: 300px;
+}
+.one-direction .table-layout p {
+    line-height: 1.71;
+    padding-bottom: 35px;
+}
+/*END ONE-DIRECTION STYLES*/
+.tab-holder img.photo {
+    display: block;
+    padding-bottom: 50px;
+}
+.employees .tab-holder .naming {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1.34;
+    padding-bottom: 20px;
+}
+.employees .tab-holder p {
+    line-height: 1.85;
+}
+.employees .tab-holder a {
+    color: #905d2b;
+    text-decoration: underline;
+}
+/*END EMPLOYEES STYLES*/
+/*NEWS STYLES*/
+.news .main .naming {
+    display: block;
+    font-weight: 400;
+    padding-bottom: 60px;
+}
+.news .news-block {
+    margin-bottom: 50px;
+}
+.news .date-holder {
+    color: #000;
+    width: 175px;
+    margin-right: 40px;
+    font-family: 'Bookman Old Style', Ubuntu, sans-serif;
+}
+.news .day {
+    display: block;
+    font-size: 36px;
+    padding-right: 40px;
+    position: relative;
+    text-align: right;
+    width: 50px;
+}
+.news .day:after {
+    position: absolute;
+    content: '';
+    background: url('../images/news-inclined.png') no-repeat;
+    width: 58px;
+    height: 59px;
+    top: 10px;
+    margin-left: -15px;
+}
+.news .month {
+    padding-top: 30px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.34;
+}
+.news .news-holder {
+    width: 770px;
+    padding-bottom: 50px;
+}
+.news-ref {
+    color: #905d2b;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+.news-ref:hover {
+    text-decoration: none;
+}
+.news .news-holder p {
+    line-height: 1.86;
+}
+/*END NEWS STYLES*/
+/*ONE-NEWS STYLES*/
+.one-news .txt-holder {
+    width: 660px;
+    margin-right: 30px;
+}
+.one-news .dating {
+    display: block;
+    padding-bottom: 30px;
+}
+.one-news .naming {
+    display: block;
+    padding-bottom: 60px;
+}
+.one-news .txt-holder p {
+    padding-bottom: 30px;
+}
+.one-news .other-news {
+    width: 300px;
+    box-sizing: border-box;
+    border-left: solid 1px #e5e5e5;
+}
+.other-news .block {
+    padding: 0 30px;
+    margin-bottom: 55px;
+}
+.other-news .block .dating {
+    padding-bottom: 25px;
+}
+.other-news .block a {
+    font-size: inherit;
+}
+.other-news .block p {
+    line-height: 1.57;
+}
+/*END ONE-NEWS STYLES*/
+/*CONTACTS STYLES*/
+.contacts .col1 {
+    width: 265px;
+}
+.contacts .col2 {
+    width: 220px;
+}
+.contacts .col3 {
+    width: 250px;
+}
+.contacts .col4 {
+    width: 170px;
+}
+.contacts .naming {
+    display: block;
+    padding-bottom: 40px;
+}
+.contacts .info {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.contacts .info a {
+    color: #905d2b;
+}
+.contacts .col3 .info {
+    font-size: inherit;
+    line-height: 2.14;
+}
+.contacts .col4 .info {
+    font-size: inherit;
+    line-height: 2.14;
+    padding-top: 18px;
+}
+.contacts .flexible {
+    padding-bottom: 60px;
+}
+#map {
+    height: 47%;
+    position: fixed !important;
+    width: 100%;
+    bottom: 0;
+    z-index: -999;
+    margin-left: -9vw;
+}
+.news .main,
+.one-news .main,
+.contacts .main {
+    padding-top: 60px;
+}
+/*END CONTACTS STYLES*/
+.sticky {
+    position: fixed;
+    z-index: 101;
+}
+.stop {
+    position: relative;
+    z-index: 101;
+}
+@media screen and (max-width: 1365px) {
+    header,
+    .main-menu .menu,
+    .main-menu .btm {
+        display: block;
+    }
+    .btm .lang {
+        padding-left: 15px;
+    }
+    .aside {
+        display: none;
+    }
+    .main-menu {
+        background: #2b1712 url('../images/header-bg.jpg') repeat;
+    }
+    .main-menu .menu {
+        margin-left: -20px;
+    }
+    .main {
+        margin: 0;
+    }
+    .container {
+        width: 944px;
+    }
+    .intro .container {
+        padding-top: 100px;
+    }
+    .intro.container {
+        padding-top: 100px;
+    }
+    .company .industry {
+        width: 430px;
+        padding-right: 50px;
+    }
+    .company .practice-holder {
+        width: 450px;
+        padding-right: 14px;
+    }
+    .intro-btm {
+        width: 1144px;
+    }
+    .exp-btm {
+        width: 1084px;
+    }
+    .about-top .holder {
+        width: 604px;
+    }
+    .about-btm .table-block {
+        width: 1004px;
+    }
+    .about-top .table-block {
+        padding-bottom: 50px;
+        margin: 0 -30px;
+        border-spacing: 30px 0;
+        width: 682px;
+    }
+    .curators .tab-content .pull-left {
+        width: 260px;
+        padding-right: 10px;
+    }
+    .curators .tab-content .pull-right {
+        width: 670px;
+    }
+    .footer .table-block {
+        margin: 0 -25px;
+        border-spacing: 25px 0;
+        width: 994px;
+    }
+    .directions .heading {
+        padding-top: 132px;
+    }
+    .directions .heading:before {
+        top: 146px;
+    }
+    .tabset-holder .tabset li:last-child {
+        padding-bottom: 40px;
+    }
+    .one-direction .main,
+    .employees .main {
+        padding-top: 72px;
+    }
+    .news .main,
+    .one-news .main,
+    .contacts .main {
+        padding-top: 90px;
+    }
+    .news .container,
+    .one-news .container {
+        width: 990px;
+    }
+    #map {
+        margin-left: 0;
+    }
+}
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+    body {
+        font-size: 16px;
+    }
+    .logo {
+        width: 225px;
+        height: 80px;
+    }
+    .container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        width: 1160px;
+    }
+    .naming {
+        font-size: 28px;
+    }
+    .aside {
+        width: 323px;
+    }
+    .aside-holder {
+        padding: 70px 35px 35px;
+    }
+    .main {
+        margin-left: 323px;
+    }
+    .aside-holder .tagline {
+        font-size: 14px;
+        line-height: 1.49;
+        padding-top: 15px;
+    }
+    .menu {
+        padding: 40px 0;
+    }
+    .menu a {
+        line-height: 1.654;
+    }
+    .menu li {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+    .menu-item {
+        font-size: 22px;
+        line-height: 1.28;
+    }
+    .lang {
+        padding: 45px 0;
+    }
+    .lang img {
+        padding-right: 19px;
+        width: 28px;
+        height: 28px;
+    }
+    .footer .copyright {
+        font-size: 14px;
+        line-height: 1.58;
+    }
+    .intro .container {
+        padding-top: 55px;
+        padding-bottom: 54px;
+    }
+    .intro-top {
+        padding-bottom: 60px;
+        font-size: 18px;
+    }
+    .intro-top .umbrella {
+        width: 393px;
+        height: 358px;
+    }
+    .intro-top h2 {
+        font-size: 70px;
+    }
+    .intro-top .tagline {
+        font-size: 42px;
+        padding-top: 100px;
+    }
+    .intro-top p {
+        line-height: 1.78;
+    }
+    .intro-btm .name {
+        font-size: 28px;
+    }
+    .intro-btm {
+        margin: 0 -140px;
+        border-spacing: 140px 0;
+        width: 1440px;
+    }
+    .services .container {
+        padding-top: 95px;
+    }
+    .services-top {
+        padding-bottom: 107px;
+    }
+    .services-top .subnaming {
+        font-size: 42px;
+        line-height: 1.238;
+    }
+    .services .flexible-columns {
+        padding-bottom: 90px;
+    }
+    .services .flexible img {
+        width: 70px;
+        height: 70px;
+    }
+    .services .flexible a {
+        font-size: 18px;
+        line-height: 1.45;
+        width: 260px;
+    }
+    .experience .container {
+        padding-bottom: 100px;
+    }
+    .experience p {
+        font-size: 17px;
+        line-height: 1.647;
+    }
+    .exp-top {
+        padding-bottom: 65px;
+    }
+    .exp-top p {
+        font-size: 18px;
+        line-height: 1.78;
+    }
+    .exp-btm {
+        padding-bottom: 45px;
+        margin: 0 -100px;
+        border-spacing: 100px 0;
+        width: 1360px;
+    }
+    .exp-btm .name {
+        font-size: 24px;
+        line-height: 1.34;
+    }
+    .experience .conclusion {
+        font-size: 21px;
+        line-height: 1.6;
+    }
+    .about .container {
+        padding-top: 100px;
+    }
+    .about-top img {
+        padding-left: 34px;
+        width: 364px;
+        height: 441px;
+    }
+    .about-top .holder {
+        width: 762px;
+    }
+    .about-top .table-block {
+        margin: 0 -34px;
+        border-spacing: 34px 0;
+        width: 830px;
+    }
+    .about .cell-block {
+        padding: 0 65px;
+        line-height: 1.625;
+    }
+    .about-item {
+        font-size: 28px;
+    }
+    .about-btm .table-block {
+        margin: 0 -34px;
+        border-spacing: 34px 0;
+        width: 1228px;
+    }
+    .footer .table-block {
+        margin: 0 -75px;
+        border-spacing: 75px 0;
+        width: 1310px;
+    }
+    .footer .name a {
+        font-size: 14px;
+    }
+    .footer .cell-block {
+        width: 71px;
+        height: 71px;
+    }
+    .footer .plant {
+        width: 61px;
+        height: 48px;
+    }
+    .footer .healthcare {
+        width: 59px;
+        height: 65px;
+    }
+    .footer .medlex {
+        width: 62px;
+        height: 62px;
+    }
+    .footer .professors {
+        width: 71px;
+        height: 42px;
+    }
+    .footer .league {
+        width: 68px;
+        height: 68px;
+    }
+    /*COMPANY STYLES*/
+    .menu li.active:after {
+        background: url('../images/li-bg1600.jpg');
+        width: 323px;
+        height: 50px;
+        top: -9px;
+        left: -35px;
+    }
+    .menu li.active:before {
+        background: url('../images/li-arrowbg1600.png');
+        width: 25px;
+        height: 50px;
+        top: -9px;
+        left: 287px;
+    }
+    .company .container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    .company .industry {
+        width: 504px;
+        padding-right: 66px;
+    }
+    .company .practice-holder {
+        width: 570px;
+        padding-right: 20px;
+    }
+    .industry img {
+        width: 504px;
+        height: 316px;
+        padding-bottom: 105px;
+    }
+    .industry .naming {
+        padding-bottom: 35px;
+    }
+    .industry .list {
+        font-size: 18px;
+    }
+    .industry .list:before {
+        width: 5px;
+        height: 5px;
+        top: 40%;
+        left: -15px;
+    }
+    .practice-holder h2 {
+        font-size: 42px;
+    }
+    .practice-holder .tagline {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+    .practice {
+        width: 459px;
+    }
+    .practice-list li {
+        padding-bottom: 15px;
+    }
+    .practice .naming {
+        padding: 47px 55px 30px 55px;
+    }
+    .practice-list {
+        padding: 0 55px 47px 55px;
+    }
+    .curators-img {
+        width: 104px;
+        height: 104px;
+    }
+    .curators .tabset li {
+        padding-right: 40px;
+    }
+    .curators .tabset .active {
+        padding: 7px;
+    }
+    .curators .tab-content .pull-left {
+        width: 300px;
+        padding-right: 20px;
+    }
+    .curators .tab-content .pull-right {
+        width: 840px;
+    }
+    .curators .tab-content .naming {
+        font-size: 34px;
+    }
+    .conclusion {
+        font-size: 21px;
+    }
+    /*END COMPANY STYLES*/
+    /*DIRECTIONS STYLES*/
+    .directions .heading {
+        font-size: 18px;
+        line-height: 2.14;
+        padding: 0 40px;
+    }
+    .directions .heading:before {
+        width: 18px;
+        top: 19px;
+    }
+    .services-btm .naming {
+        font-size: 23px;
+    }
+    .services-btm .flexible-columns {
+        width: 320px;
+    }
+    .services-btm .others {
+        font-size: 18px;
+    }
+    .services-btm span.mega {
+        font-size: 20px;
+    }
+    .services-btm .others p {
+        padding-left: 40px;
+    }
+    /*END DIRECTIONS STYLES*/
+    .one-direction .curator-img {
+        width: 110px;
+        height: 110px;
+        padding-bottom: 70px;
+    }
+    .one-direction .curator-name {
+        font-size: 20px;
+        padding-top: 28px;
+        padding-bottom: 98px;
+    }
+    .one-direction .table-layout {
+        width: 760px;
+    }
+    .one-direction .table-block {
+        margin: 0 -60px;
+        border-spacing: 60px 0;
+        width: 880px;
+    }
+    .one-direction .cell {
+        width: 350px;
+    }
+    .tabset-holder {
+        width: 352px;
+    }
+    .tabset-holder .tabset a {
+        width: 352px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .tabset-holder .icon-tabs {
+        width: 82px;
+        height: 82px;
+    }
+    .tabset-holder .tabset a.active:after {
+        background-image: url('../images/one-direction-img01-1600.png');
+        width: 65px;
+        height: 130px;
+        left: 352px;
+    }
+    .bg-holder,
+    .tabset-holder {
+        width: 352px;
+    }
+    .tab-content .tab-holder {
+        margin-left: 352px;
+    }
+    .list .one-line {
+        padding-top: 35px;
+    }
+    .list .two-lines {
+        padding-top: 22px;
+    }
+    .list .three-lines {
+        padding-top: 9px;
+    }
+    .employees .tab-holder .naming {
+        font-size: 35px;
+    }
+    .tab-holder img.photo {
+        width: 463px;
+        height: 333px;
+        padding-bottom: 55px;
+    }
+    .news .main .naming {
+        padding-bottom: 70px;
+    }
+    .news .news-block {
+        margin-bottom: 60px;
+    }
+    .news .date-holder {
+        width: 210px;
+        margin-right: 50px;
+    }
+    .news .news-holder {
+        width: 900px;
+    }
+    .news .day {
+        font-size: 40px;
+        padding-right: 45px;
+        width: 60px;
+    }
+    .news .day:after {
+        width: 64px;
+        height: 65px;
+        margin-left: -10px;
+    }
+    .news .month {
+        font-size: 20px;
+    }
+    .news .news-holder a {
+        font-size: 18px;
+    }
+    .one-news .txt-holder {
+        width: 770px;
+        margin-right: 50px;
+    }
+    .one-news .other-news {
+        width: 340px;
+    }
+    .one-news .block {
+        padding: 0 40px;
+        margin-bottom: 60px;
+    }
+    .contacts .info {
+        font-size: 18px;
+    }
+    .contacts .col1 {
+        width: 290px;
+    }
+    .contacts .col2 {
+        width: 220px;
+    }
+    .contacts .col3 {
+        width: 270px;
+    }
+    .contacts .col4 {
+        width: 190px;
+    }
+    .contacts .container,
+    .news .container {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 20px;
+    }
+    .logo {
+        width: 270px;
+        height: 95px;
+    }
+    .container {
+        padding-top: 15px;
+        padding-bottom: 120px;
+        width: 1400px;
+    }
+    .naming {
+        font-size: 34px;
+    }
+    .aside {
+        width: 388px;
+    }
+    .aside-holder {
+        padding: 85px 45px 45px;
+    }
+    .main {
+        margin-left: 388px;
+    }
+    .aside-holder .tagline {
+        font-size: 17px;
+        line-height: 1.47;
+        padding-top: 20px;
+    }
+    .menu {
+        padding: 60px 0;
+    }
+    .menu a {
+        font-size: 20px;
+        line-height: 1.687;
+    }
+    .menu li {
+        margin-bottom: 30px;
+    }
+    .menu-item {
+        font-size: 27px;
+        line-height: 1.25;
+    }
+    .lang {
+        padding: 55px 0;
+    }
+    .lang img {
+        padding-right: 22px;
+        height: 34px;
+        width: 34px;
+    }
+    .footer .copyright {
+        font-size: 17px;
+        line-height: 1.49;
+    }
+    .intro .container {
+        padding-top: 62px;
+        padding-bottom: 56px;
+    }
+    .intro-top {
+        padding-bottom: 74px;
+        font-size: 22px;
+    }
+    .intro-top .umbrella {
+        width: 472px;
+        height: 429px;
+        padding: 38px 24px 10px;
+    }
+    .intro-top h2 {
+        font-size: 84px;
+    }
+    .intro-top .tagline {
+        font-size: 51px;
+        line-height: 1.157;
+        padding-top: 120px;
+    }
+    .intro-top p {
+        line-height: 1.77;
+        padding-top: 38px;
+    }
+    .intro-btm .name {
+        font-size: 34px;
+        line-height: 1;
+    }
+    .intro-btm {
+        margin: 0 -160px;
+        border-spacing: 160px 0;
+        width: 1720px;
+    }
+    .services .container {
+        padding-top: 120px;
+    }
+    .services-top {
+        padding-bottom: 123px;
+    }
+    .services-top .subnaming {
+        font-size: 51px;
+        line-height: 1.216;
+    }
+    .services .flexible-columns {
+        width: 440px;
+        padding-bottom: 108px;
+    }
+    .corr {
+        padding-right: 10px;
+        float: none;
+    }
+    .services .flexible img {
+        width: 85px;
+        height: 85px;
+    }
+    .services .flexible a {
+        font-size: 22px;
+        line-height: 1.375;
+        width: 300px;
+        margin-top: 11px;
+    }
+    .services .flexible a.one-line {
+        margin-top: 25px;
+    }
+    .experience .container {
+        padding-top: 120px;
+    }
+    .experience p {
+        line-height: 1.7;
+    }
+    .exp-top {
+        padding-bottom: 60px;
+    }
+    .exp-top p {
+        font-size: 22px;
+        line-height: 1.77;
+    }
+    .exp-btm {
+        margin: 0 -100px;
+        border-spacing: 100px 0;
+        width: 1600px;
+    }
+    .exp-btm .name {
+        font-size: 28px;
+        line-height: 1.39;
+    }
+    .experience .conclusion {
+        font-size: 25px;
+        line-height: 1.57;
+    }
+    .about .container {
+        padding-top: 125px;
+    }
+    .about-top img {
+        padding-left: 46px;
+        width: 436px;
+        height: 529px;
+    }
+    .txt-holder p {
+        line-height: 1.95;
+    }
+    .about-top .holder {
+        width: 918px;
+    }
+    .about-top .table-block {
+        margin: 0 -46px;
+        border-spacing: 46px 0;
+        width: 1010px;
+    }
+    .about .cell-block {
+        padding: 0 70px;
+        line-height: 1.55;
+    }
+    .about-item {
+        font-size: 34px;
+        line-height: 1.158;
+    }
+    .about-btm .table-block {
+        margin: 0 -46px;
+        border-spacing: 46px 0;
+        width: 1492px;
+    }
+    .footer .table-block {
+        margin: 0 -85px;
+        border-spacing: 85px 0;
+        width: 1570px;
+    }
+    .footer .name a {
+        font-size: 17px;
+        line-height: 1.47;
+    }
+    .footer .cell-block {
+        width: 85px;
+        height: 85px;
+    }
+    .footer .plant {
+        width: 73px;
+        height: 58px;
+    }
+    .footer .healthcare {
+        width: 71px;
+        height: 78px;
+    }
+    .footer .medlex {
+        width: 75px;
+        height: 75px;
+    }
+    .footer .professors {
+        width: 85px;
+        height: 50px;
+    }
+    .footer .league {
+        width: 82px;
+        height: 82px;
+    }
+    /*COMPANY STYLES*/
+    .menu li.active:after {
+        background: url('../images/li-bg1920.jpg');
+        width: 388px;
+        height: 59px;
+        top: -12px;
+        left: -45px;
+    }
+    .menu li.active:before {
+        background: url('../images/li-arrowbg1920.png');
+        width: 29px;
+        height: 59px;
+        top: -12px;
+        left: 342px;
+    }
+    .company .container {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .company .industry {
+        width: 605px;
+        padding-right: 70px;
+    }
+    .company .practice-holder {
+        width: 700px;
+        padding-right: 25px;
+    }
+    .industry img {
+        width: 605px;
+        height: 379px;
+        padding-bottom: 125px;
+    }
+    .industry .naming {
+        padding-bottom: 50px;
+    }
+    .industry .list {
+        font-size: 22px;
+    }
+    .industry .list:before {
+        width: 5px;
+        height: 5px;
+        top: 40%;
+        left: -15px;
+    }
+    .practice-holder h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .practice-holder .tagline {
+        font-size: 28px;
+        margin-bottom: 80px;
+    }
+    .practice {
+        width: 551px;
+    }
+    .practice .naming {
+        padding: 53px 65px 30px 65px;
+    }
+    .practice-list {
+        padding: 0 65px 53px 65px;
+    }
+    .curators-img {
+        width: 125px;
+        height: 125px;
+    }
+    .curators .tabset .active {
+        padding: 9px;
+    }
+    .curators .tabset li {
+        padding-right: 50px;
+    }
+    .curators .tab-content .pull-left {
+        width: 360px;
+        padding-right: 20px;
+    }
+    .curators .tab-content .pull-right {
+        width: 1020px;
+    }
+    .curators .tab-content .naming {
+        font-size: 42px;
+    }
+    .conclusion {
+        font-size: 25px;
+    }
+    /*END COMPANY STYLES*/
+    /*DIRECTIONS STYLES*/
+    .directions .container {
+        padding-top: 85px;
+    }
+    .directions .heading {
+        font-size: 22px;
+        line-height: 1.77;
+        padding: 0 50px;
+    }
+    .directions .heading:before {
+        width: 23px;
+        top: 17px;
+    }
+    .services-btm .naming {
+        font-size: 28px;
+    }
+    .services-btm .flexible-columns {
+        width: 400px;
+    }
+    .services-btm .others {
+        font-size: 22px;
+        padding-bottom: 50px;
+    }
+    .services-btm span.mega {
+        font-size: 24px;
+    }
+    .services-btm .others p {
+        padding-left: 50px;
+    }
+    /*END DIRECTIONS STYLES*/
+    .one-direction .curator-img {
+        width: 125px;
+        height: 125px;
+    }
+    .one-direction .curator-name {
+        font-size: 24px;
+        padding-top: 31px;
+        padding-bottom: 81px;
+    }
+    .one-direction .table-layout {
+        width: 930px;
+    }
+    .one-direction .table-block {
+        margin: 0 -80px;
+        border-spacing: 80px 0;
+        width: 1090px;
+    }
+    .one-direction .cell {
+        width: 425px;
+    }
+    .bg-holder,
+    .tabset-holder {
+        width: 422px;
+    }
+    .tabset-holder .tabset a {
+        width: 422px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .tabset-holder .icon-tabs {
+        width: 98px;
+        height: 98px;
+        padding: 4px;
+        border-width: 5px;
+    }
+    .tabset-holder .tabset a.active:after {
+        background-image: url('../images/one-direction-img01-1920.png');
+        width: 78px;
+        height: 156px;
+        left: 422px;
+    }
+    .tabset-holder {
+        width: 422px;
+    }
+    .tab-content .tab-holder {
+        margin-left: 422px;
+    }
+    .list {
+        line-height: 1.5;
+    }
+    .list .one-line {
+        padding-top: 43px;
+    }
+    .list .two-lines {
+        padding-top: 28px;
+    }
+    .list .three-lines {
+        padding-top: 13px;
+    }
+    .employees .tab-holder .naming {
+        font-size: 42px;
+    }
+    .tab-holder img.photo {
+        width: 555px;
+        height: 399px;
+        padding-bottom: 65px;
+    }
+    .news .main .naming {
+        padding-bottom: 80px;
+    }
+    .news .news-block {
+        margin-bottom: 70px;
+    }
+    .news .date-holder {
+        width: 260px;
+        margin-right: 60px;
+    }
+    .news .news-holder {
+        width: 1080px;
+    }
+    .news .day {
+        font-size: 50px;
+        padding-right: 55px;
+        width: 70px;
+    }
+    .news .day:after {
+        margin-left: 0;
+    }
+    .news .month {
+        font-size: 25px;
+    }
+    .news .news-holder a {
+        font-size: 22px;
+    }
+    .one-news .txt-holder {
+        width: 930px;
+        margin-left: 50px;
+    }
+    .one-news .other-news {
+        width: 390px;
+    }
+    .one-news .block {
+        padding: 0 50px;
+        margin-bottom: 70px;
+    }
+    .contacts .info {
+        font-size: 28px;
+    }
+    .contacts .col1 {
+        width: 360px;
+    }
+    .contacts .col2 {
+        width: 350px;
+    }
+    .contacts .col3 {
+        width: 340px;
+    }
+    .contacts .col4 {
+        width: 230px;
+    }
+    .contacts .container,
+    .news .container {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+    .container {
+        margin-left: 100px;
+    }
+}
+@media screen and (min-width: 1820px) and (max-width: 1919px) {
+    .container {
+        margin-left: 200px;
+    }
+}
