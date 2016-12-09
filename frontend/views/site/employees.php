@@ -73,6 +73,16 @@
                 <?php endforeach; ?>
             </ul>
         </div>
+        <?php foreach ($employees as $employee):?>
+
+            <div class="tab-content" id="tab<?=$employee->id;?>">
+                <div class="tab-holder" id="tab-holder">
+                    <img src="/images/employees-img01.jpg" width="395" height="284" alt="img01" class="photo">
+                    <span class="naming"><?=$employee->name;?></span>
+                    <p><?=$employee->text;?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
         <div class="tab-content" id="tab1">
             <div class="tab-holder" id="tab-holder">
                 <img src="/images/employees-img01.jpg" width="395" height="284" alt="img01" class="photo">

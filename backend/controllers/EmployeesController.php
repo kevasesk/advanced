@@ -8,6 +8,8 @@ use common\models\EmployeesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\UploadForm;
+use yii\web\UploadedFile;
 
 /**
  * EmployeesController implements the CRUD actions for Employees model.
@@ -55,6 +57,22 @@ class EmployeesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    public function actionUpload()
+    {
+       $upload = new UploadForm();
+
+        if (Yii::$app->request->isPost) {
+
+            $upload->imageFile = UploadedFile::getInstance($upload, 'imageFile');
+            $file_uploaded=$upload->upload();
+            if ($file_uploaded['upload']) {
+
+                return $file_uploaded['fileName'];
+            }
+        }
+
+        return '';
+    }
 
     /**
      * Creates a new Employees model.
@@ -64,12 +82,18 @@ class EmployeesController extends Controller
     public function actionCreate()
     {
         $model = new Employees();
+        $upload = new UploadForm();
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $upload->load(Yii::$app->request->post());
+            $model->image=$this->actionUpload();
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'upload'=>$upload
             ]);
         }
     }
@@ -83,12 +107,18 @@ class EmployeesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $upload = new UploadForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $upload->load(Yii::$app->request->post());
+            $model->image= $this->actionUpload();
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'upload'=>$upload
             ]);
         }
     }

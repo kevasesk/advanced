@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="employees-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
@@ -20,7 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'direction_text')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($upload, 'imageFile')->fileInput() ?>
+    <?php
+
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
