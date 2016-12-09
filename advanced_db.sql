@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 09 2016 г., 16:24
+-- Время создания: Дек 09 2016 г., 17:36
 -- Версия сервера: 5.6.29
 -- Версия PHP: 5.6.19
 
@@ -33,15 +33,15 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `shortext` text NOT NULL,
   `direction_text` text NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `employees`
 --
 
 INSERT INTO `employees` (`id`, `name`, `text`, `shortext`, `direction_text`, `image`) VALUES
-(1, 'Iryna Venediktova', 'Consultant coordinating and following up on the international commercial arbitration practice. Mrs Venediktova is Head of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University, Doctor of Letters in Law, Full Professor, arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry.\r\nShe is experienced in following up on the investment funds, preparing projects for legislative and sublegislative statutory acts, solving corporate conflicts, conducting legal audits and restructuring businesses. Took a course in International Commercial Arbitration at Chartered Institute of Arbitrators.\r\nJudge of the standing arbitration court at the Foundation of Medical Law and Bioethics of Ukraine All-Ukrainian Public Organization. Vice-President of the Association of Cosmetologists and Aromologists, Vice-President of the Foundation of Medical Law and Bioethics, holds membership on CIArb and UBA (Ukrainian Bar Association).\r\nAuthor of over 150 theoretical and practical research papers.\r\nLanguages – Ukrainian, English, Russian.', 'Consultant coordinating and following up on the international commercial arbitration practice. Mrs Venediktova is Head of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University, Doctor of Letters in Law, Full Professor, arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry. She is experienced in following up and providing legal support to the investment funds, preparing projects for legislative and sublegislative statutory acts, solving corporate conflicts, conducting legal audits and restructuring businesses.', 'Arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry\r\nOver 150 theoretical and practical research papers\r\nDoctor of Letters in Law, Full Professor\r\nHead of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University\r\nFollowing up on the investment funds\r\nPreparing projects for legislative and sublegislative statutory acts\r\nSolving corporate conflicts\r\nConducting legal audits and restructuring businesses', ''),
-(2, 'test name pavlovna', 'RIBAAAAA test', 'RIBAAAAA test SHORT', 'RIBAAAAA test dir', '');
+(1, 'Iryna Venediktova', 'Consultant coordinating and following up on the international commercial arbitration practice. Mrs Venediktova is Head of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University, Doctor of Letters in Law, Full Professor, arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry.\r\nShe is experienced in following up on the investment funds, preparing projects for legislative and sublegislative statutory acts, solving corporate conflicts, conducting legal audits and restructuring businesses. Took a course in International Commercial Arbitration at Chartered Institute of Arbitrators.\r\nJudge of the standing arbitration court at the Foundation of Medical Law and Bioethics of Ukraine All-Ukrainian Public Organization. Vice-President of the Association of Cosmetologists and Aromologists, Vice-President of the Foundation of Medical Law and Bioethics, holds membership on CIArb and UBA (Ukrainian Bar Association).\r\nAuthor of over 150 theoretical and practical research papers.\r\nLanguages – Ukrainian, English, Russian.', '<p>Consultant coordinating and following up on the international commercial arbitration practice.</p>\r\n <p>Mrs Venediktova is Head of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University, Doctor of Letters in Law, Full Professor, arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry. She is experienced in following up and providing legal support to the investment funds, preparing projects for legislative and sublegislative statutory acts, solving corporate conflicts, conducting legal audits and restructuring businesses.</p>', 'Arbitrator at the International Commercial Arbitration Court and the Maritime Arbitration Commission at the Ukrainian Chamber of Commerce and Industry\r\nOver 150 theoretical and practical research papers\r\nDoctor of Letters in Law, Full Professor\r\nHead of the Department for Civil Law Disciplines at V. N. Karazin Kharkiv National University\r\nFollowing up on the investment funds\r\nPreparing projects for legislative and sublegislative statutory acts\r\nSolving corporate conflicts\r\nConducting legal audits and restructuring businesses', 'Lighthouse.jpg'),
+(2, 'test name pavlovna', 'RIBAAAAA test', 'RIBAAAAA test SHORT', 'RIBAAAAA test dir', 'Hydrangeas.jpg');
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
