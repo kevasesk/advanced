@@ -6,4 +6,5 @@ adminka
 --nastroika punktov menu s kartinkami
 pretty url
 lists on pages with links
+--AJAX menu (one page)
 ------------------------------------------
