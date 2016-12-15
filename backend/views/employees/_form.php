@@ -20,11 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'direction_text')->textarea(['rows' => 6]) ?>
 
-
+    image:
+    <?= $form->field($model, "image")->hiddenInput()->label(false) ?>
+    <?php echo Html::img($model->image); ?>
     <?= $form->field($upload, 'imageFile')->fileInput() ?>
-    <?php
 
-    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

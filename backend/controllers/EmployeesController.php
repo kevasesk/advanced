@@ -57,14 +57,14 @@ class EmployeesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-    public function actionUpload()
+    public function upload()
     {
        $upload = new UploadForm();
 
         if (Yii::$app->request->isPost) {
 
             $upload->imageFile = UploadedFile::getInstance($upload, 'imageFile');
-            $file_uploaded=$upload->upload();
+            $file_uploaded=$upload->upload($this);
             if ($file_uploaded['upload']) {
 
                 return $file_uploaded['fileName'];
@@ -87,7 +87,8 @@ class EmployeesController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $upload->load(Yii::$app->request->post());
-            $model->image=$this->actionUpload();
+            $file=$this->upload();
+            if($file!=='')$model->image =$file;
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -111,7 +112,8 @@ class EmployeesController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $upload->load(Yii::$app->request->post());
-            $model->image= $this->actionUpload();
+            $file=$this->upload();
+            if($file!=='')$model->image =$file;
             $model->save();
 
             return $this->redirect(['view', 'id' => $model->id]);

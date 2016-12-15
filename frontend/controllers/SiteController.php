@@ -1,14 +1,19 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\Directiories;
 use common\models\Employees;
+use common\models\News;
+
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
 use common\models\LoginForm;
+
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -65,22 +70,12 @@ class SiteController extends Controller
             ],
         ];
     }
-
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index',array(
+            'directions'=>Directiories::find()->asArray()->all()
+        ));
     }
-
-    /**
-     * Logs in a user.
-     *
-     * @return mixed
-     */
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -96,48 +91,34 @@ class SiteController extends Controller
             ]);
         }
     }
-
-    /**
-     * Logs out the current user.
-     *
-     * @return mixed
-     */
-    public function actionLogout()
+     function actionLogout()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
-
-    /**
-     * Displays contact page.
-     *
-     * @return mixed
-     */
     public function actionContact()
     {
         $this->view->params['bodyClass'] = 'contacts';
         $this->view->params['footer'] = false;
         return $this->render('contact');
     }
-
-    /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
     public function actionAbout()
     {
         $this->view->params['bodyClass'] = 'company';
         $this->view->params['footer'] = true;
-        return $this->render('about');
+        return $this->render('about',[
+            'employees'=>Employees::find()->asArray()->all(),
+        ]);
 
     }
     public function actionDirections()
     {
         $this->view->params['bodyClass'] = 'directions';
         $this->view->params['footer'] = false;
-        return $this->render('directions');
+        return $this->render('Directions',array(
+            'directions'=>Directiories::find()->asArray()->all()
+        ));
 
     }
     public function actionEmployees()
@@ -145,17 +126,11 @@ class SiteController extends Controller
         $this->view->params['bodyClass'] = 'employees';
         $this->view->params['footer'] = false;
         return $this->render('employees',[
-            'employees'=>Employees::find()->all(),
+            'employees'=>Employees::find()->asArray()->all(),
         ]);
 
     }
-    public function actionNews()
-    {
-        $this->view->params['bodyClass'] = 'news';
-        $this->view->params['footer'] = false;
-        return $this->render('news');
 
-    }
 
     /**
      * Signs user up.

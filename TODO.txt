@@ -1,10 +1,13 @@
-svaz mejdu employees and directions
+
 HMTLeditor (MCE)
 viviod informacii
 ru end uk
-adminka
+
 --nastroika punktov menu s kartinkami
-pretty url
+
 lists on pages with links
 --AJAX menu (one page)
 ------------------------------------------
+svaz mejdu employees and directions
+adminka
+pretty url

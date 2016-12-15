@@ -34,6 +34,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'shortext:ntext',
             'direction_text:ntext',
             'image',
+            [
+                'attribute'=>'image',
+                'format' => ['image'],
+                'value'=>$model->image,
+            ],
         ],
     ]) ?>
 

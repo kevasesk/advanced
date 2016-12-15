@@ -18,7 +18,7 @@ use yii\widgets\Menu;
             ['label' => 'Our lawyers', 'url' => ['site/employees'],
                 'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe001;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>",
             ],
-            ['label' => 'News', 'url' => ['site/news'],
+            ['label' => 'News', 'url' => ['news/index'],
                 'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe02c;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>",
             ],
             ['label' => 'Contacts', 'url' => ['site/contact'],

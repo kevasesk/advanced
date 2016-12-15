@@ -30,6 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'shortext:ntext',
             'direction_text:ntext',
             'image',
+            array(
+                'format' => 'image',
+                'value'=>function($data) { return $data->image; },
+                'attribute'=>'image',
+            ),
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

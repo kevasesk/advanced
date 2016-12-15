@@ -4,6 +4,7 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
+use yii\helpers\Url;
 
 class UploadForm extends Model
 {
@@ -15,18 +16,24 @@ class UploadForm extends Model
     public function rules()
     {
         return [
-            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
 
-    public function upload()
+    public function upload($model)
     {
-        if ($this->validate()) {
-            $this->imageFile->saveAs(Yii::$app->basePath . "/web/uploads/" . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+        if(!is_dir(Url::to('@frontend/web/uploads/').$model->id))
+            mkdir(Url::to('@frontend/web/uploads/').$model->id) ;
+        $file=uniqid(). '.' . $this->imageFile->extension;
+        if ($this->validate() && $this->imageFile!==null) {
+
+            $this->imageFile->saveAs(Url::to('@frontend/web/uploads/').$model->id. "/" . $file);
+
             return [
-                'upload'=>true,
-                'fileName'=>$this->imageFile->baseName . '.' . $this->imageFile->extension,
+                'upload' => true,
+                'fileName' =>Url::to('@fronturl').'/uploads/'.$model->id. "/" . $file,
             ];
+
         } else {
             return false;
         }

@@ -1,4 +1,5 @@
 <?php $this->registerJsFile('/js/tabs.js', ['depends'=>'frontend\assets\AppAsset']);?>
+
 <div class="border">
     <div class="intro container clearfix">
         <div class="industry pull-left clearfix">
@@ -103,23 +104,33 @@
         </div>
         <div class="tabs">
             <ul class="tabset" id="tabset">
-                <li><a href="#tab1" class="active"><img src="/images/company-img02.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
+                <?php foreach ($employees as $key => $employee):?>
+                    <li><a href="#tab<?=$employee['id'];?>" class="<?php if($key==0)echo "active";?>">
+                            <img src="<?=$employee['image'];?>" width="89" height="89" alt="Curators" class="curators-img">
+                        </a>
+                    </li>
+                <?php endforeach;?>
+            <!--
                 <li><a href="#tab2"><img src="/images/company-img03.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
                 <li><a href="#tab3"><img src="/images/company-img04.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
                 <li><a href="#tab4"><img src="/images/company-img05.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
                 <li><a href="#tab5"><img src="/images/company-img06.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
                 <li><a href="#tab6"><img src="/images/company-img01.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
                 <li><a href="#tab7"><img src="/images/company-img07.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
+                -->
             </ul>
-            <div class="tab-content clearfix" id="tab1">
-                <div class="pull-left">
-                    <span class="naming">Iryna<br>Venediktova </span>
-                    <a href="employees.html#tab1">Go to the consultant’s page</a>
+            <?php foreach ($employees as $employee):?>
+                <div class="tab-content clearfix" id="tab<?=$employee['id']?>">
+                    <div class="pull-left">
+                        <span class="naming"><?=$employee['name']?></span>
+                        <a href="employees.html#tab<?=$employee['id']?>">Go to the consultant’s page</a>
+                    </div>
+                    <div class="pull-right">
+                        <p><?=$employee['shortext']?></p>
+                    </div>
                 </div>
-                <div class="pull-right">
-                    <p>Consultant coordinating and following up&nbsp;on&nbsp;the international commercial arbitration practice. Mrs Venediktova is&nbsp;Head of&nbsp;the Department for Civil Law Disciplines at&nbsp;V.&nbsp;N.&nbsp;Karazin Kharkiv National University, Doctor of&nbsp;Letters in&nbsp;Law, Full Professor, arbitrator at&nbsp;the International Commercial Arbitration Court and the Maritime Arbitration Commission at&nbsp;the Ukrainian Chamber of&nbsp;Commerce and Industry. She is&nbsp;experienced in&nbsp;following up&nbsp;and providing legal support to&nbsp;the investment funds, preparing projects for legislative and sublegislative statutory acts, solving corporate conflicts, conducting legal audits and restructuring businesses.</p>
-                </div>
-            </div>
+            <?php endforeach;?>
+            <!--
             <div class="tab-content clearfix" id="tab2">
                 <div class="pull-left">
                     <span class="naming">Stanislav<br>Borisov</span>
@@ -174,6 +185,7 @@
                     <p>Consultant, coordinating and following up&nbsp;the banking law, search and return of&nbsp;assets practice who started his professional career as&nbsp;a&nbsp;legal consultant at&nbsp;the National Bank of&nbsp;Ukraine. Since 2004&nbsp;he has been gaining experience, practicing law in&nbsp;administrative, economic and civil cases.</p>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </div>
