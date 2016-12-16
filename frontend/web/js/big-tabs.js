@@ -1,3 +1,9 @@
+jQuery(function(){
+    jQuery('#tabset').contentTabs({
+        animSpeed: 500,
+    });
+});
+
 $(function() {
     $(".tab-content").hide();
     $("ul.tabset li").click(function() {

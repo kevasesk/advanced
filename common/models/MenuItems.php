@@ -5,22 +5,22 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "translations".
+ * This is the model class for table "menu_items".
  *
  * @property integer $id
- * @property integer $id_object
- * @property integer $id_lang
+ * @property integer $index
  * @property string $field
  * @property string $value
+ * @property integer $lang_id
  */
-class Translations extends \yii\db\ActiveRecord
+class MenuItems extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'translations';
+        return 'menu_items';
     }
 
     /**
@@ -29,8 +29,9 @@ class Translations extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_object', 'id_lang'], 'integer'],
-            [['field', 'value'], 'string', 'max' => 255],
+            [['index', 'lang_id'], 'integer'],
+            [['value'], 'string'],
+            [['field'], 'string', 'max' => 255],
         ];
     }
 
@@ -41,10 +42,10 @@ class Translations extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_object' => 'Id Object',
-            'id_lang' => 'Id Lang',
+            'index' => 'Index',
             'field' => 'Field',
             'value' => 'Value',
+            'lang_id' => 'Lang ID',
         ];
     }
 }

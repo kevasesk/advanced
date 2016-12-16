@@ -39,6 +39,8 @@ AppAsset::register($this);
         ['label' => 'News', 'url' => ['/news']],
         ['label' => 'Employees', 'url' => ['/employees']],
         ['label' => 'Directories', 'url' => ['/directiories']],
+        ['label' => 'Langs', 'url' => ['/languages']],
+        ['label' => 'Menu', 'url' => ['/menuitems']],
         ['label' => 'Home', 'url' => ['/site/index']],
 
     ];

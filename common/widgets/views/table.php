@@ -9,7 +9,7 @@ use yii\helpers\Url;
             <div class="flexible-columns">
                 <div class="<?php if($key==1)echo 'correct';?>">
                     <img class="pull-left" src="<?php echo $dir['icon'];?>" alt="icon" width="60" height="60">
-                    <a href="one-direction.html#tab<?= $dir['id']?>" title="International commercial arbitration"><?= $dir['title']?></a>
+                    <a href="/directions/view#tab<?= $dir['id']?>" title="International commercial arbitration"><?= $dir['title']?></a>
                 </div>
             </div>
         <?php endforeach; ?>

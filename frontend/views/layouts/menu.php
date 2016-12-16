@@ -1,24 +1,27 @@
 <?php
-use yii\widgets\Menu;
-
+//use yii\widgets\Menu;
+use common\widgets\MainMenu;
 
 ?>
 <div class="main-menu" id="menu">
 
 
     <?php
+    /*
     $menu= Menu::widget([
         'items' => [
-            ['label' => 'About Us', 'url' => ['site/about'],
-                'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe04b;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>"
+            [
+                'label' => 'About Us',
+                'url' => ['site/about'],
+                'template'=>"<a href='{url}'><span class=\"glyph-item menu-item icon-trophy\" data-js-prompt=\"&#xe04b;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>"
             ],
-            ['label' => 'Key areas', 'url' => ['site/directions'],
+            ['label' => 'Key areas', 'url' => ['/directions'],
                 'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe040;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>",
             ],
-            ['label' => 'Our lawyers', 'url' => ['site/employees'],
+            ['label' => 'Our lawyers', 'url' => ['/employees'],
                 'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe001;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>",
             ],
-            ['label' => 'News', 'url' => ['news/index'],
+            ['label' => 'News', 'url' => ['news/'],
                 'template'=>"<a href='{url}'><span class=\"glyph-item menu-item\" data-js-prompt=\"&#xe02c;\" data-icon=\"\" aria-hidden=\"true\"></span>{label}</a>",
             ],
             ['label' => 'Contacts', 'url' => ['site/contact'],
@@ -32,7 +35,9 @@ use yii\widgets\Menu;
         'linkTemplate'=>'',
     ]);
     echo $menu
+    */
     ?>
+    <?= MainMenu::widget();?>
     <div class="btm">
         <div class="lang">
             <img src="/images/lang-en-hover.png" border="0" width="34" height="34" alt="en">
@@ -44,9 +49,9 @@ use yii\widgets\Menu;
 </div>
 <aside class="aside">
     <div class="aside-holder">
-        <a href="index.html"><img class="logo" src="/images/logo.png" width="192" height="68" alt="Peregrin Capital Group"></a>
+        <a href="/"><img class="logo" src="/images/logo.png" width="192" height="68" alt="Peregrin Capital Group"></a>
         <span class="tagline">Your protection and comfort<br>during legal proceedings</span>
-        <?= $menu;?>
+        <?= MainMenu::widget();?>
         <footer class="footer">
             <div class="footer-holder">
                 <div class="lang">

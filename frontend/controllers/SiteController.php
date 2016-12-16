@@ -24,9 +24,6 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
@@ -54,10 +51,6 @@ class SiteController extends Controller
             ],
         ];
     }
-
-    /**
-     * @inheritdoc
-     */
     public function actions()
     {
         return [
@@ -76,27 +69,8 @@ class SiteController extends Controller
             'directions'=>Directiories::find()->asArray()->all()
         ));
     }
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
-    }
-     function actionLogout()
-    {
-        Yii::$app->user->logout();
 
-        return $this->goHome();
-    }
     public function actionContact()
     {
         $this->view->params['bodyClass'] = 'contacts';
@@ -112,31 +86,28 @@ class SiteController extends Controller
         ]);
 
     }
-    public function actionDirections()
+
+    public function actionLogin()
     {
-        $this->view->params['bodyClass'] = 'directions';
-        $this->view->params['footer'] = false;
-        return $this->render('Directions',array(
-            'directions'=>Directiories::find()->asArray()->all()
-        ));
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
 
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
     }
-    public function actionEmployees()
+    function actionLogout()
     {
-        $this->view->params['bodyClass'] = 'employees';
-        $this->view->params['footer'] = false;
-        return $this->render('employees',[
-            'employees'=>Employees::find()->asArray()->all(),
-        ]);
+        Yii::$app->user->logout();
 
+        return $this->goHome();
     }
-
-
-    /**
-     * Signs user up.
-     *
-     * @return mixed
-     */
     public function actionSignup()
     {
         $model = new SignupForm();
@@ -152,12 +123,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-    /**
-     * Requests password reset.
-     *
-     * @return mixed
-     */
     public function actionRequestPasswordReset()
     {
         $model = new PasswordResetRequestForm();
@@ -175,14 +140,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-    /**
-     * Resets password.
-     *
-     * @param string $token
-     * @return mixed
-     * @throws BadRequestHttpException
-     */
     public function actionResetPassword($token)
     {
         try {

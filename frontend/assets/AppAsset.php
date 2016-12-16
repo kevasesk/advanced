@@ -20,6 +20,9 @@ class AppAsset extends AssetBundle
         'js/main.js',
         'js/hamburger.js',
         'js/jquery.tabs.js',
+       // 'js/tabs.js',
+        'js/big-tabs.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

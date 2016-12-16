@@ -110,82 +110,18 @@
                         </a>
                     </li>
                 <?php endforeach;?>
-            <!--
-                <li><a href="#tab2"><img src="/images/company-img03.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                <li><a href="#tab3"><img src="/images/company-img04.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                <li><a href="#tab4"><img src="/images/company-img05.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                <li><a href="#tab5"><img src="/images/company-img06.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                <li><a href="#tab6"><img src="/images/company-img01.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                <li><a href="#tab7"><img src="/images/company-img07.jpg" width="89" height="89" alt="Curators" class="curators-img"></a></li>
-                -->
             </ul>
             <?php foreach ($employees as $employee):?>
                 <div class="tab-content clearfix" id="tab<?=$employee['id']?>">
                     <div class="pull-left">
                         <span class="naming"><?=$employee['name']?></span>
-                        <a href="employees.html#tab<?=$employee['id']?>">Go to the consultant’s page</a>
+                        <a href="/employees/#tab<?=$employee['id']?>">Go to the consultant’s page</a>
                     </div>
                     <div class="pull-right">
                         <p><?=$employee['shortext']?></p>
                     </div>
                 </div>
             <?php endforeach;?>
-            <!--
-            <div class="tab-content clearfix" id="tab2">
-                <div class="pull-left">
-                    <span class="naming">Stanislav<br>Borisov</span>
-                    <a href="employees.html#tab2">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Attorney, consultant coordinating and following up&nbsp;on&nbsp;the court practice of&nbsp;the firm. Mr&nbsp;Borisov started his professional career as&nbsp;a&nbsp;SSU investigator specializing in&nbsp;cyber crime. He&nbsp;has been practicing law since 2009, and since 2010&nbsp;he has been actively involved as&nbsp;a&nbsp;defense lawyer. Mr&nbsp;Borisov is&nbsp;set apart as&nbsp;a&nbsp;professional by&nbsp;his success rate in&nbsp;civil, economic, administrative, and criminal cases.</p>
-                </div>
-            </div>
-            <div class="tab-content clearfix" id="tab3">
-                <div class="pull-left">
-                    <span class="naming">Iryna<br>Seniuta</span>
-                    <a href="employees.html#tab3">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Defense lawyer, consultant, coordinating and following up&nbsp;on&nbsp;the medical law practice. Ms&nbsp;Seniuta is&nbsp;Head of&nbsp;the Medical Law Department at&nbsp;the Postgraduate Learning Faculty of&nbsp;Danylo Halytsky Lviv National Medical University, with a&nbsp;PhD in&nbsp;Law.</p>
-                </div>
-            </div>
-            <div class="tab-content clearfix" id="tab4">
-                <div class="pull-left">
-                    <span class="naming">Yaroslav<br>Epifanov</span>
-                    <a href="employees.html#tab4">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Defense lawyer, consultant coordinating and following up&nbsp;on&nbsp;the tax law and taxation optimization practices. Mr&nbsp;Epifanov has an&nbsp;extensive background in&nbsp;contesting decisions and actions of&nbsp;fiscal bodies in&nbsp;court. He&nbsp;is&nbsp;also professionally involved in&nbsp;the area of&nbsp;corporate law. Has also worked on&nbsp;drafting legislation on&nbsp;state registration of&nbsp;businesses.</p>
-                </div>
-            </div>
-            <div class="tab-content clearfix" id="tab5">
-                <div class="pull-left">
-                    <span class="naming">Olena<br>Ustimenko</span>
-                    <a href="employees.html#tab5">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Defense lawyer, consultant coordinating and following up&nbsp;on&nbsp;the mediation and reconciliation practice. Mrs Ustimenko has a&nbsp;degree of&nbsp;PhD in&nbsp;Law. She is&nbsp;an&nbsp;Associate Professor at&nbsp;the Department for Civil Law Disciplines of&nbsp;V.&nbsp;N.&nbsp;Karazin Kharkiv National University. She has a&nbsp;wide array of&nbsp;knowledge, skills and experience in&nbsp;solving corporate conflicts, representing parties in&nbsp;civil, economic, and administrative legal proceedings and dealing with state authorities.</p>
-                </div>
-            </div>
-            <div class="tab-content clearfix" id="tab6">
-                <div class="pull-left">
-                    <span class="naming">Mikhailo<br>Shumilo</span>
-                    <a href="employees.html#tab6">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Consultant, curator of&nbsp;the labor law and social benefits law practices. Mr&nbsp;Shumilo is&nbsp;Senior Researcher of&nbsp;the Civil, Labor and Entrepreneurial Law Department at&nbsp;V.&nbsp;M.&nbsp;Koretsky Institute of&nbsp;State and Law at&nbsp;the National Academy of&nbsp;Sciences of&nbsp;Ukraine, with a&nbsp;PhD in&nbsp;Law.</p>
-                </div>
-            </div>
-            <div class="tab-content clearfix" id="tab7">
-                <div class="pull-left">
-                    <span class="naming">Yuri<br>Zinchenko</span>
-                    <a href="employees.html#tab7">Go to the consultant’s page</a>
-                </div>
-                <div class="pull-right">
-                    <p>Consultant, coordinating and following up&nbsp;the banking law, search and return of&nbsp;assets practice who started his professional career as&nbsp;a&nbsp;legal consultant at&nbsp;the National Bank of&nbsp;Ukraine. Since 2004&nbsp;he has been gaining experience, practicing law in&nbsp;administrative, economic and civil cases.</p>
-                </div>
-            </div>
-            -->
         </div>
     </div>
 </div>

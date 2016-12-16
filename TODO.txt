@@ -1,13 +1,16 @@
 
-HMTLeditor (MCE)
-viviod informacii
+
 ru end uk
+bugs...
 
---nastroika punktov menu s kartinkami
 
-lists on pages with links
---AJAX menu (one page)
-------------------------------------------
+DONE:------------------------------------------
 svaz mejdu employees and directions
 adminka
 pretty url
+viviod informacii
+lists on pages with links
+--nastroika punktov menu s kartinkami
+--AJAX menu (one page)
+
+MCE Editor

@@ -4,20 +4,19 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Employees */
+/* @var $model app\models\MenuItems */
 
-$this->title = 'Create Employees';
-$this->params['breadcrumbs'][] = ['label' => 'Employees', 'url' => ['index']];
+$this->title = 'Create Menu Items';
+$this->params['breadcrumbs'][] = ['label' => 'Menu Items', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="employees-create">
+<div class="menu-items-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
-        'upload' => $upload,
-
+        'menu'=>$menu
     ]) ?>
 
 </div>

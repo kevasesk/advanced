@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\Pjax;
 ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -11,10 +12,9 @@ use yii\helpers\Html;
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700' rel='stylesheet' type='text/css'>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <?php $this->head() //class="<?=$this->params['bodyClass'];?>
 </head>
-
-<body class="<?=$this->params['bodyClass'];?>">
+<body>
 <header>
     <div class="holder clearfix">
         <a href="/" class="logo pull-left"><img src="/images/logo-sm.png" width="73" height="26" alt="Peregrin Capital Group"></a>
