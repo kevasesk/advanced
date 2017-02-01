@@ -31,6 +31,7 @@ class Directiories extends \yii\db\ActiveRecord
         return [
             [['title'], 'required'],
             [['content'], 'string'],
+            [['content_ru'], 'string'],
             [['id_employee'], 'integer'],
             [['title', 'icon'], 'string', 'max' => 255],
         ];
@@ -45,6 +46,7 @@ class Directiories extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'content' => 'Content',
+            'content_ru' => 'Content YEA',
             'id_employee' => 'Id Employee',
             'icon' => 'Icon',
         ];

@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'content:ntext',
+            'content_ru:ntext',
             'id_employee',
             array(
                 'value'=>function($data) { return $data->getEmployee()->name; },

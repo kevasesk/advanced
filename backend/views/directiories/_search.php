@@ -20,6 +20,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'title') ?>
 
     <?= $form->field($model, 'content') ?>
+    <?= $form->field($model, 'content_ru') ?>
 
     <?= $form->field($model, 'id_employee') ?>
 
